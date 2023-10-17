@@ -1,0 +1,457 @@
+   <div class="card-body table-responsive p-0 table-wrapper-scroll-y my-custom-scrollbar1">
+                                    <table class="table table-hover text-nowrap text-center table-striped">
+                                        <thead class="border-top">
+                                            <tr>
+                                                <th scope="col">State</th>
+                                                <th scope="col" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                    title="Total beneficiary numbers">Total <i class="fa fa-info-circle"
+                                                        aria-hidden="true"></i></th>
+                                                <th scope="col" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                    title="Total number of calls answered">Success <i
+                                                        class="fa fa-info-circle" aria-hidden="true"></i></th>
+                                                <th scope="col" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                    title="Total number of calls not answered">Unsuccess <i
+                                                        class="fa fa-info-circle" aria-hidden="true"></i></th>
+                                                <th scope="col" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                    title="Total number of pending calls">Pending <i
+                                                        class="fa fa-info-circle" aria-hidden="true"></i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row"><a href="public-state-reports.html">Andhra Pradesh</a>
+                                                </td>
+                                                <td><span class="text-primary">100 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+10</span></sup>
+                                                </td>
+                                                <td><span class="text-success">60 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+6</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">20 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+2</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">20 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+2</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Arunachal Pradesh</td>
+                                                <td><span class="text-primary">500 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">200 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+20</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">250 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+25</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">50 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+5</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Assam</td>
+                                                <td><span class="text-primary">5,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">3,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+3</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">1,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+10</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">1,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+10</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Bihar</td>
+                                                <td><span class="text-primary">200 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+20</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">50 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">100 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+10</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">50 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+5</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><a href="public-state-reports.html">Chhattisgarh</a>
+                                                </td>
+                                                <td><span class="text-primary">10,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">8,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+80</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">1,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+10</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">1,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+10</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Goa</td>
+                                                <td><span class="text-primary">3,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+30</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">2,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+20</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">500 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">500 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+5</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Gujarat</td>
+                                                <td><span class="text-primary">20,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+200</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">15,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+150</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">3,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+30</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">2,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+20</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Haryana</td>
+                                                <td><span class="text-primary">15.000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+150</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">8,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">80</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">5,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">2,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+20</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Himachal Pradesh</td>
+                                                <td><span class="text-primary">18,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+180</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">8,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+80</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">8,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+80</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">2,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+20</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Jharkhand</td>
+                                                <td><span class="text-primary">800 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+80</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">300 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+30</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">200 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+2</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">300 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+3</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Karnataka</td>
+                                                <td><span class="text-primary">1,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">500 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">400 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+40</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">100 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+10</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Kerala</td>
+                                                <td><span class="text-primary">15.000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+1500</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">8,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+800</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">5,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+500</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">2,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+20</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Madhya Pradesh</td>
+                                                <td><span class="text-primary">3,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+300</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">2,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+20</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">500 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">500 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+50</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Maharashtra</td>
+                                                <td><span class="text-primary">200 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+200</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">50 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">100 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">50 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+5</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Manipur</td>
+                                                <td><span class="text-primary">200 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+20</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">50 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">100 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">50 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+5</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Meghalaya</td>
+                                                <td><span class="text-primary">5,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+500</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">3,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+30</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">1,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">1,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+100</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Mizoram</td>
+                                                <td><span class="text-primary">20,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+2000</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">15,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+150</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">3,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+300</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">2,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+200</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Nagaland</td>
+                                                <td><span class="text-primary">100 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+10</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">60 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+6</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">20 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+20</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">20 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+2</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Odisha</td>
+                                                <td><span class="text-primary">3,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+300</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">2,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+20</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">500 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+40</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">500 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+50</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Punjab</td>
+                                                <td><span class="text-primary">10,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">8,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+80</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">1,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">1,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+100</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Rajasthan</td>
+                                                <td><span class="text-primary">5,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+500</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">3,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+30</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">1,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">1,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+100</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Sikkim</td>
+                                                <td><span class="text-primary">1,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+10</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">500 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">400 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+400</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">100 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+10</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Tamil Nadu</td>
+                                                <td><span class="text-primary">18,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+1800</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">8,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+80</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">8,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+800</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">2,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+200</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Telangana</td>
+                                                <td><span class="text-primary">3,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+30</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">2,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+200</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">500 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+500</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">500 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+50</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Tripura</td>
+                                                <td><span class="text-primary">15.000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+500</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">8,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+80</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">5,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+500</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">2,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+200</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Uttar Pradesh</td>
+                                                <td><span class="text-primary">5,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">3,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+30</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">1,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">1,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+100</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Uttarakhand</td>
+                                                <td><span class="text-primary">500 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">200 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+20</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">250 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+25</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">50 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+5</span></sup></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">West Bengal</td>
+                                                <td><span class="text-primary">5,000 <sup><span
+                                                                class="badge badge-light-primary rounded-pill">+50</span></sup></span>
+                                                </td>
+                                                <td><span class="text-success">3,000 <sup><span
+                                                                class="badge badge-light-success rounded-pill">+30</span></sup></span>
+                                                </td>
+                                                <td><span class="text-danger">1,000 <sup><span
+                                                                class="badge badge-light-danger rounded-pill">+100</span></sup></span>
+                                                </td>
+                                                <td><span class="text-warning">1,000 <sup><span
+                                                                class="badge badge-light-warning rounded-pill">+100</span></sup></span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                
+/* Copy Paste disable */
+* {
+  user-select: none;
+}
+*::selection {
+  background: none;
+}
+*::-moz-selection {
+  background: none;
+}

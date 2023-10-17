@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/images/logo/jjm-logo.svg" type="image/x-icon">
+  <title>Jal Jeevan Mission | Home</title>
+  <!-- Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"
+    rel="stylesheet">
+  <!-- Font Awsome  -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
+  <!-- Flag icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
+  <!-- Feather icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
+  <!-- Plugins css start-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/prism.css">
+  <!-- Plugins css Ends-->
+  <!-- Bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+  <!-- App css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <!-- Responsive css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+</head>
+
+<body onload="startTime()">
+  <!-- loader starts-->
+  <div class="loader-wrapper">
+    <div class="loader-index"> <span></span></div><svg>
+      <defs></defs>
+      <filter id="goo">
+        <fegaussianblur in="SourceGraphic" stddeviation="11" result="blur"></fegaussianblur>
+        <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo">
+        </fecolormatrix>
+      </filter>
+    </svg>
+  </div>
+  <!-- loader ends-->
+  <!-- tap on top starts-->
+  <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+  <!-- tap on tap ends-->
+  <!-- page-wrapper Start-->
+  <div class="page-wrapper compact-wrapper" id="pageWrapper">
+    <!-- Page Header Start-->
+    <div class="page-header">
+      <div class="header-wrapper row m-0">
+        <form class="form-inline search-full col" action="#" method="get">
+          <div class="form-group w-100">
+            <div class="Typeahead Typeahead--twitterUsers">
+              <div class="u-posRelative"> <input class="demo-input Typeahead-input form-control-plaintext w-100"
+                  type="text" placeholder="Search .." name="q" title="" autofocus>
+                <div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span>
+                </div><i class="close-search" data-feather="x"></i>
+              </div>
+              <div class="Typeahead-menu"></div>
+            </div>
+          </div>
+        </form>
+        <div class="header-logo-wrapper col-auto p-0">
+          <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="../assets/images/logo/jjm-logo.svg"
+                alt=""></a></div>
+          <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
+          </div>
+        </div>
+        <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
+          <div class="notification-slider">
+            <div class="d-flex h-100"> <img src="../assets/images/dashboard/water.png" alt="water">
+              <h6 class="mb-0 f-w-400">Currently Talking to <a href="feedback-form.html"><span class="font-info">Vikash
+                    Garg 6263685314</span></a><span class="f-light"></span></h6><i
+                class="icon-arrow-top-right f-light"></i>
+            </div>
+            <div class="d-flex h-100"><img src="../assets/images/dashboard/water.png" alt="water">
+              <h6 class="mb-0 f-w-400">Currently Talking to <a href="feedback-form.html"><span class="font-info">Vikash
+                    Garg 6263685314</span></a></h6><a class="ms-1" href="#" target="_blank"></a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-right col-xxl-7 col-xl-6 col-md-7 col-8 pull-right right-header p-0 ms-auto">
+          <ul class="nav-menus">
+            <li class="language-nav">
+              <div class="translate_wrapper">
+                <div class="current_lang">
+                  <div class="lang"><i class="flag-icon flag-icon-in"></i><span class="lang-txt">IN
+                    </span></div>
+                </div>
+              </div>
+            </li>
+            <li> <span class="header-search"> <i data-feather="search"></i></span></li>
+            <li>
+              <div class="mode"> <i data-feather="moon"></i> </div>
+            </li>
+            <li class="profile-nav onhover-dropdown pe-0 py-0">
+              <div class="media profile-media"><img class="b-r-10" src="../assets/images/dashboard/profile.png" alt="">
+                <div class="media-body"><span>Caller 1</span>
+                  <p class="mb-0 font-roboto">Caller <i class="middle fa fa-angle-down"></i></p>
+                </div>
+              </div>
+              <ul class="profile-dropdown onhover-show-div">
+                <li><a href="#"><i data-feather="user"></i><span>Account </span></a></li>
+                <li><a href="#"><i data-feather="settings"></i><span>Settings</span></a></li>
+                <li><a href="../index.html"><i data-feather="log-in"> </i><span>Log out</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Page Header Ends-->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper">
+      <!-- Page Sidebar Start-->
+      <div class="sidebar-wrapper" sidebar-layout="stroke-svg">
+        <div>
+          <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="../assets/images/logo/jjm-logo.svg"
+                alt="JJM Logo">Jal Jeevan Mission</a>
+            <div class="back-btn"><i class="fa fa-angle-left"></i></div>
+            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid">
+              </i></div>
+          </div>
+          <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid"
+                src="../assets/images/logo/jjm-logo.svg" alt="JJM Logo"></a></div>
+          <nav class="sidebar-main">
+            <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+            <div id="sidebar-menu">
+              <ul class="sidebar-links" id="simple-bar">
+                <li class="back-btn"><a href="index.html"><img class="img-fluid"
+                      src="../assets/images/logo/jjm-logo.svg" alt="JJM Logo"></a>
+                  <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
+                      aria-hidden="true"></i></div>
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i> <label
+                    class="badge badge-light-primary"></label><a class="sidebar-link sidebar-title" href="index.html">
+                    <i data-feather="home"></i><span>Dashboard </span></a> </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title"
+                    href="edit-profile.html"> <i data-feather="edit"></i><span>Edit Profile</span></a> </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title"
+                    href="change-password.html"> <i data-feather="lock"></i> </svg><span>Change Password</span></a>
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"> </i> <label
+                    class="badge badge-light-secondary"></label><a class="sidebar-link sidebar-title"
+                    href="../index.html"> <i data-feather="log-out"></i> <span>Logout </span></a> </li>
+              </ul>
+            </div>
+            <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+          </nav>
+        </div>
+      </div>
+      <!-- Page Sidebar Ends-->
+      <div class="page-body">
+        <div class="container-fluid">
+          <div class="page-title">
+            <div class="row">
+              <div class="col-6">
+                <h4>Dashboard</h4>
+              </div>
+              <div class="col-6">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">
+                      <i data-feather="home"></i></a></li>
+                  <li class="breadcrumb-item">Dashboard</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Container-fluid starts-->
+        <div class="container-fluid">
+          <div class="row widget-grid">
+            <div class="col-xxl-4 col-sm-6 box-col-6">
+              <div class="card profile-box">
+                <div class="card-body">
+                  <div class="media media-wrapper justify-content-between">
+                    <div class="media-body">
+                      <div class="greeting-user">
+                        <h4 class="f-w-600">Welcome to JJM</h4>
+                        <img class="" src="../assets/images/logo/jjm-logo.svg" alt="JJM Logo" height="120px">
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <div class="clockbox">
+                        <svg id="clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                          <g id="face">
+                            <circle class="circle" cx="300" cy="300" r="253.9"></circle>
+                            <path class="hour-marks"
+                              d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6">
+                            </path>
+                            <circle class="mid-circle" cx="300" cy="300" r="16.2"></circle>
+                          </g>
+                          <g id="hour">
+                            <path class="hour-hand" d="M300.5 298V142"></path>
+                            <circle class="sizing-box" cx="300" cy="300" r="253.9"></circle>
+                          </g>
+                          <g id="minute">
+                            <path class="minute-hand" d="M300.5 298V67"> </path>
+                            <circle class="sizing-box" cx="300" cy="300" r="253.9"></circle>
+                          </g>
+                          <g id="second">
+                            <path class="second-hand" d="M300.5 350V55"></path>
+                            <circle class="sizing-box" cx="300" cy="300" r="253.9"> </circle>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="badge f-10 p-0" id="txt"></div>
+                      <div class="h6 font-weight-bold text-gray-800" id="ct7"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-auto col-xl-3 col-sm-6 box-col-6">
+              <div class="row">
+                <div class="col-xl-12">
+                  <a href="total.html">
+                    <div class="card widget-1">
+                      <div class="card-body">
+                        <div class="widget-content">
+                          <div class="widget-round primary">
+                            <div class="bg-round">
+                              <img src="../assets/images/svgImage/phone-out-svgrepo-com.svg" alt=""
+                                style="padding: 4px;">
+                            </div>
+                          </div>
+                          <div>
+                            <h4>5,384</h4><span class="f-light">Total</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="col-xl-12">
+                    <a href="success.html">
+                      <div class="card widget-1">
+                        <div class="card-body">
+                          <div class="widget-content">
+                            <div class="widget-round success">
+                              <div class="bg-round">
+                                <img src="../assets/images/svgImage/success-filled-svgrepo-com.svg" alt="">
+                              </div>
+                            </div>
+                            <div>
+                              <h4>5,364</h4><span class="f-light">Success</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-auto col-xl-3 col-sm-6 box-col-6">
+              <div class="row">
+                <div class="col-xl-12">
+                  <a href="pending.html">
+                    <div class="card widget-1">
+                      <div class="card-body">
+                        <div class="widget-content">
+                          <div class="widget-round warning">
+                            <div class="bg-round">
+                              <img src="../assets/images/svgImage/shifts-pending-svgrepo-com.svg" alt=""
+                                style="padding: 4px;">
+                            </div>
+                          </div>
+                          <div>
+                            <h4>20</h4><span class="f-light">Pending</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="col-xl-12">
+                    <a href="unsuccess.html">
+                      <div class="card widget-1">
+                        <div class="card-body">
+                          <div class="widget-content">
+                            <div class="widget-round secondary">
+                              <div class="bg-round">
+                                <img src="../assets/images/svgImage/cancel-svgrepo-com.svg" alt="">
+                              </div>
+                            </div>
+                            <div>
+                              <h4>7</h4><span class="f-light">Unsuccess</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-auto col-xl-12 col-sm-6 box-col-6">
+              <div class="row">
+                <div class="col-xxl-12 col-xl-6 box-col-12">
+                  <a href="feedback-form.html">
+                    <div class="card widget-1 widget-with-chart">
+                      <div class="card-body">
+                        <div>
+                          <h6 class="mb-1">6263685314</h6><span class="f-light">Currently talking to: Vikash
+                            Garg</span>
+                        </div>
+                        <div class="user-list">
+                          <div class="user-icon primary">
+                            <div class="user-box"><i class="font-primary" data-feather="phone-call"></i></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-xxl-12 col-xl-6 box-col-12">
+                  <a href="today-total-calls.html">
+                    <div class="card widget-1 widget-with-chart">
+                      <div class="card-body">
+                        <div>
+                          <h6 class="mb-1">100</h6><span class="f-light">Today Your Total Calls </span>
+                        </div>
+                        <div class="user-list">
+                          <div class="user-icon success">
+                            <div class="user-box"><i class="font-success" data-feather="phone"></i></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 box-col-12">
+              <div class="card o-hidden">
+                <div class="card-header card-no-border">
+                  <h5>Called Graph</h5>
+                  <div class="card-header-right">
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" id="dropdownschedules" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Daily</button>
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownschedules"><a
+                          class="dropdown-item" href="#dailyTable" id="daily-btn">Daily</a><a class="dropdown-item"
+                          href="#weeklyTable" id="weekly-btn">Weekly</a><a class="dropdown-item" href="#monthlyTable"
+                          id="monthly-btn">Monthly</a><a class="dropdown-item" href="#quarterlyTable"
+                          id="quarterly-btn">Quarterly</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-container" id="dailyTable">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="chart-widget4"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chart-container" id="weeklyTable">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="chart-widget5"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chart-container" id="monthlyTable">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="chart-widget16"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chart-container" id="quarterlyTable">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="chart-widget17"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Container-fluid Ends-->
+      </div>
+      <!-- footer start-->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 footer-copyright text-center">
+              <p class="mb-0">Copyright © Patio Digital Pvt Ltd 2023. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- latest jquery-->
+  <script src="../assets/js/jquery.min.js"></script>
+  <!-- Bootstrap js-->
+  <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- feather icon js-->
+  <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+  <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+  <!-- scrollbar js-->
+  <script src="../assets/js/scrollbar/simplebar.js"></script>
+  <script src="../assets/js/scrollbar/custom.js"></script>
+  <!-- Sidebar jquery-->
+  <script src="../assets/js/config.js"></script>
+  <!-- Plugins JS start-->
+  <script src="../assets/js/sidebar-menu.js"></script>
+  <script src="../assets/js/clock.js"></script>
+  <script src="../assets/js/slick/slick.min.js"></script>
+  <script src="../assets/js/slick/slick.js"></script>
+  <script src="../assets/js/header-slick.js"></script>
+  <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
+  <script src="../assets/js/prism/prism.min.js"></script>
+  <script src="../assets/js/dashboard/default.js"></script>
+  <script src="../assets/js/height-equal.js"></script>
+  <script src="../assets/js/animation/wow/wow.min.js"></script>
+  <script src="../assets/js/chart-widget.js"></script>
+  <script src="../assets/js/time/time.js"></script>
+  <!-- Theme js-->
+  <script src="../assets/js/script.js"></script>
+  <!-- Plugins JS Ends-->
+  <!-- Plugin used-->
+  <script>new WOW().init();</script>
+</body>
+
+</html>
