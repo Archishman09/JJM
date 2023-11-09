@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jal Jeevan Mission</title>
+    <style>
+        body {
+            font-size: 14px;
+            overflow-x: hidden;
+            font-family: Rubik, sans-serif;
+        }
+
+        .bg-primary {
+            background-color: #7366ff;
+            color: #fff;
+        }
+
+        .bg-info {
+            background-color: #0dcaf0;
+            color: #fff;
+        }
+
+        .rounded-pill {
+            border-radius: 50rem;
+        }
+
+        .rounded-circle {
+            border-radius: 50%;
+            font-size: 0px;
+        }
+
+        .p-1 {
+            padding: 0.25rem;
+        }
+
+        .p-2 {
+            padding: 0.5rem !important;
+        }
+
+
+        .mb-2 {
+            margin-bottom: 0.5rem !important;
+        }
+
+        .border-light {
+            border-color: #f8f9fa;
+        }
+
+        .border {
+            border: 1px solid #dee2e6;
+        }
+
+        .visually-hidden,
+        .visually-hidden-focusable:not(:focus):not(:focus-within) {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .justify-content-around {
+            justify-content: space-around;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .chart-overflow {
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .line-1,
+        .line-4 {
+            height: 1px;
+            background: black;
+            rotate: 113deg;
+            overflow: hidden;
+            position: relative;
+            bottom: 8px;
+            width: 50px;
+            left: 98px;
+            z-index: 1;
+        }
+
+        .line-2,
+        .line-3 {
+            height: 1px;
+            background: black;
+            rotate: 65deg;
+            overflow: hidden;
+            position: relative;
+            bottom: 6px;
+            width: 47px;
+            left: 36px;
+            z-index: 1;
+        }
+
+        .apexcharts-text {
+            font-weight: 500;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        table {
+            caption-side: bottom;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: inherit;
+            text-align: -webkit-match-parent;
+        }
+
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        td,
+        th {
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
+        }
+
+        .table {
+            --bs-table-bg: transparent;
+            --bs-table-accent-bg: transparent;
+            --bs-table-striped-color: #212529;
+            --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+            --bs-table-active-color: #212529;
+            --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+            --bs-table-hover-color: #212529;
+            --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            vertical-align: top;
+            border-color: #dee2e6;
+        }
+
+        .table> :not(caption)>*>* {
+            padding: 0.5rem 0.5rem;
+            background-color: var(--bs-table-bg);
+            border-bottom-width: 1px;
+            box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+        }
+
+        .table>tbody {
+            vertical-align: inherit;
+        }
+
+        .table>thead {
+            vertical-align: bottom;
+        }
+
+        .table> :not(:last-child)> :last-child>* {
+            border-bottom-color: currentColor;
+        }
+
+        .table-bordered> :not(caption)>* {
+            border-width: 1px 0;
+        }
+
+        .table-bordered> :not(caption)>*>* {
+            border-width: 0 1px;
+        }
+
+        .apexcharts-legend {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table text-nowrap table-bordered text-center">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Is tap connection provided?</th>
+                <th>Is water supplied adequate?</th>
+                <th>Are you satisfied with quality of water?</th>
+                <th>Is water supplied regularly?</th>
+                <th>How many in a week water is supplied?</th>
+                <th>Do you pay water charges?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="p-2 mb-2 bg-info rounded-pill">July 31 - Aug 5, 2023</div>
+                    <div class="p-2 mb-2 bg-primary rounded-pill">Total Successful calls <b>2381</b></div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart1"></div>
+                    <div class="d-flex justify-content-around">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart2"></div>
+                    <div class="d-flex justify-content-around">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <div class="chart-overflow" id="piechart3"></div>
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <div class="chart-overflow" id="piechart13" style="margin-left: 18px;"></div>
+
+                    </div>
+                    <p>Mention water quality issue?</p>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Dirty Water
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Foul Smell
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0077b3;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Salty Water
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0099ff;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Hard Water
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart4"></div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart5"></div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0077b3;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            1 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0099ff;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            2 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0066cc;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            3 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #005ce6;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            4 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #1aa3ff;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            5 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            6 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            7 days
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart6"></div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="p-2 mb-2 bg-info rounded-pill">Cumulative till July 30, 2023</div>
+                    <div class="p-2 mb-2 bg-primary rounded-pill">Total Successful calls <b>2381</b></div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart7"></div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart8"></div>
+                    <div class="line-3"></div>
+                    <div class="line-4"></div>
+                    <div class="chart-overflow" id="piechart14" style="margin-left: 18px;"></div>
+                    <p>Is water supplied is adequate <br> for cooking & drinking?</p>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart9"></div>
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="chart-overflow" id="piechart15" style="margin-left: 18px;"></div>
+                    <p>Mention water quality issue?</p>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Dirty Water
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Foul Smell
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0077b3;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Salty Water
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0099ff;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Hard Water
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart10"></div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart11"></div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0077b3;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            1 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0099ff;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            2 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0066cc;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            3 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #005ce6;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            4 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #1aa3ff;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            5 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            6 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            7 days
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart-overflow" id="piechart12"></div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script>
+        var primary = localStorage.getItem("primary") || '#7366ff';
+        var secondary = localStorage.getItem("secondary") || '#16C7F9';
+
+        window.CubaAdminConfig = {
+            // Theme Primary Color
+            primary: primary,
+            // theme secondary color
+            secondary: secondary,
+        };
+
+    </script>
+
+    <script>
+        // pie chart
+        var options1 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [18, 0],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 180,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart1 = new ApexCharts(document.querySelector("#piechart1"), options1);
+
+        chart1.render();
+
+        var options2 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [18, 0],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart2 = new ApexCharts(document.querySelector("#piechart2"), options2);
+
+        chart2.render();
+
+        var options3 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [17, 1],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart3 = new ApexCharts(document.querySelector("#piechart3"), options3);
+
+        chart3.render();
+
+        var options4 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [15, 3],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart4 = new ApexCharts(document.querySelector("#piechart4"), options4);
+
+        chart4.render();
+
+        var options5 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["1 day", "2 days", "3 days", "4 days", "5 days", "6 days", "7 days"],
+            series: [1, 1, 0, 1, 0, 0, 15],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [
+                "#0077b3",
+                "#0099ff",
+                "#0066cc",
+                "#005ce6",
+                "#1aa3ff",
+                CubaAdminConfig.primary,
+                CubaAdminConfig.secondary,
+            ],
+        };
+
+        var chart5 = new ApexCharts(document.querySelector("#piechart5"), options5);
+
+        chart5.render();
+
+        var options6 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [5, 13],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart6 = new ApexCharts(document.querySelector("#piechart6"), options6);
+
+        chart6.render();
+
+        var options7 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [13, 5],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart7 = new ApexCharts(document.querySelector("#piechart7"), options7);
+
+        chart7.render();
+
+        var options8 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [14, 4],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart8 = new ApexCharts(document.querySelector("#piechart8"), options8);
+
+        chart8.render();
+
+        var options9 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [13, 5],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart9 = new ApexCharts(document.querySelector("#piechart9"), options9);
+
+        chart9.render();
+
+        var options10 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [10, 8],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart10 = new ApexCharts(document.querySelector("#piechart10"), options10);
+
+        chart10.render();
+
+        var options11 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["1 day", "2 days", "3 days", "4 days", "5 days", "6 days", "7 days"],
+            series: [1, 1, 0, 1, 0, 0, 15],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [
+                "#0077b3",
+                "#0099ff",
+                "#0066cc",
+                "#005ce6",
+                "#1aa3ff",
+                CubaAdminConfig.primary,
+                CubaAdminConfig.secondary,
+            ],
+        };
+
+        var chart11 = new ApexCharts(document.querySelector("#piechart11"), options11);
+
+        chart11.render();
+
+        var options12 = {
+            chart: {
+                width: 180,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [12, 6],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart12 = new ApexCharts(document.querySelector("#piechart12"), options12);
+
+        chart12.render();
+
+        var options13 = {
+            chart: {
+                width: 150,
+                type: "pie",
+            },
+            labels: ["Dirty Water", "Foul Smell", "Salty Water", "Hard Water"],
+            series: [1, 0, 0, 0],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [
+                CubaAdminConfig.secondary,
+                CubaAdminConfig.primary,
+                "#0077b3",
+                "#0099ff",
+            ],
+        };
+
+        var chart13 = new ApexCharts(document.querySelector("#piechart13"), options13);
+
+        chart13.render();
+
+        var options14 = {
+            chart: {
+                width: 150,
+                type: "pie",
+            },
+            labels: ["Yes", "No"],
+            series: [18, 0],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [CubaAdminConfig.secondary, CubaAdminConfig.primary],
+        };
+
+        var chart14 = new ApexCharts(document.querySelector("#piechart14"), options14);
+
+        chart14.render();
+
+        var options15 = {
+            chart: {
+                width: 150,
+                type: "pie",
+            },
+            labels: ["Dirty Water", "Foul Smell", "Salty Water", "Hard Water"],
+            series: [15, 0, 3, 0],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                    },
+                },
+            ],
+            colors: [
+                CubaAdminConfig.secondary,
+                CubaAdminConfig.primary,
+                "#0077b3",
+                "#0099ff",
+            ],
+        };
+
+        var chart15 = new ApexCharts(document.querySelector("#piechart15"), options15);
+
+        chart15.render();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jal Jeevan Mission</title>
+    <style>
+        body {
+            font-size: 14px;
+            overflow-x: hidden;
+            font-family: Rubik, sans-serif;
+        }
+
+        .bg-primary {
+            background-color: #fcae91;
+            color: #fff;
+        }
+
+        .bg-info {
+            background-color: #3182bd;
+            color: #fff;
+        }
+
+        .bg-secondary {
+            background-color: #16c7f9;
+            color: #fff;
+        }
+
+        .bg-danger {
+            background-color: #7366ff;
+            color: #fff;
+        }
+
+        .rounded-pill {
+            border-radius: 50rem;
+        }
+
+        .rounded-circle {
+            border-radius: 50%;
+            font-size: 0px;
+        }
+
+        .p-1 {
+            padding: 0.25rem;
+        }
+
+        .p-2 {
+            padding: 0.5rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .border-light {
+            border-color: #f8f9fa;
+        }
+
+        .border {
+            border: 1px solid #dee2e6;
+        }
+
+        .visually-hidden,
+        .visually-hidden-focusable:not(:focus):not(:focus-within) {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .justify-content-around {
+            justify-content: space-around;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .line-1 {
+            height: 1px;
+            background: black;
+            rotate: 113deg;
+            overflow: hidden;
+            position: relative;
+            bottom: 8px;
+            width: 55px;
+            left: 96px;
+            z-index: 1;
+        }
+
+        .line-2 {
+            height: 1px;
+            background: black;
+            rotate: 65deg;
+            overflow: hidden;
+            position: relative;
+            bottom: 9px;
+            width: 55px;
+            left: 26px;
+            z-index: 1;
+        }
+
+        .line-3 {
+            height: 1px;
+            background: black;
+            rotate: 113deg;
+            overflow: hidden;
+            position: relative;
+            bottom: 8px;
+            width: 55px;
+            left: 83px;
+            z-index: 1;
+        }
+
+        .line-4 {
+            height: 1px;
+            background: black;
+            rotate: 65deg;
+            overflow: hidden;
+            position: relative;
+            bottom: 9px;
+            width: 55px;
+            left: 12px;
+            z-index: 1;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        table {
+            caption-side: bottom;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: inherit;
+            text-align: -webkit-match-parent;
+        }
+
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        td,
+        th {
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
+        }
+
+        .table {
+            --bs-table-bg: transparent;
+            --bs-table-accent-bg: transparent;
+            --bs-table-striped-color: #212529;
+            --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+            --bs-table-active-color: #212529;
+            --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+            --bs-table-hover-color: #212529;
+            --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            vertical-align: top;
+            border-color: #dee2e6;
+        }
+
+        .table> :not(caption)>*>* {
+            padding: 0.5rem 0.5rem;
+            background-color: var(--bs-table-bg);
+            border-bottom-width: 1px;
+            box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+        }
+
+        .table>tbody {
+            vertical-align: inherit;
+        }
+
+        .table>thead {
+            vertical-align: bottom;
+        }
+
+        .table> :not(:last-child)> :last-child>* {
+            border-bottom-color: currentColor;
+        }
+
+        .table-bordered> :not(caption)>* {
+            border-width: 1px 0;
+        }
+
+        .table-bordered> :not(caption)>*>* {
+            border-width: 0 1px;
+        }
+
+        .wrapper {
+            width: 120px;
+            height: 120px;
+            background: #3182bd;
+            margin: 10px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            transform: rotate(108deg);
+        }
+
+        .wrapper .d1 {
+            width: 240px;
+            height: 240px;
+            position: absolute;
+            top: -55px;
+            left: -55px;
+            transform: rotate(0deg);
+        }
+
+        .wrapper .d1 div {
+            width: 240px;
+            height: 240px;
+        }
+
+        .wrapper .d1 div span {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: -11px;
+            top: 94px;
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 100;
+            color: #000;
+            transform: rotate(-108deg);
+        }
+
+        .wrapper .d1 div:after {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border: solid transparent;
+            border-width: 120px;
+            /* border-top-color: #3182bd; */
+            position: relative;
+            transform: scaleX(-3.07768);
+        }
+
+        .wrapper .d2 {
+            width: 240px;
+            height: 240px;
+            position: absolute;
+            top: -55px;
+            left: -55px;
+            transform: rotate(16.6deg);
+        }
+
+        .wrapper .d2 div {
+            width: 240px;
+            height: 240px;
+        }
+
+        .wrapper .d2 div span {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 34%;
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 100;
+            color: #000;
+            transform: rotate(-111.6deg);
+        }
+
+        .wrapper .d2 div:after {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border: solid transparent;
+            border-width: 120px;
+            border-top-color: #bdd7e7;
+            position: relative;
+            transform: scaleX(0.6);
+        }
+
+        .wrapper .d3 {
+            width: 240px;
+            height: 240px;
+            position: absolute;
+            top: -55px;
+            left: -55px;
+            transform: rotate(45.6deg);
+        }
+
+        .wrapper .d3 div {
+            width: 240px;
+            height: 240px;
+        }
+
+        .wrapper .d3 div span {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 34%;
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 100;
+            color: #000;
+            transform: rotate(-161.6deg);
+        }
+
+        .wrapper .d3 div:after {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border: solid transparent;
+            border-width: 120px;
+            border-top-color: #08519c;
+            position: relative;
+            transform: scaleX(0.25676);
+        }
+
+        .wrapper .d4 {
+            width: 240px;
+            height: 240px;
+            position: absolute;
+            top: -55px;
+            left: -55px;
+            transform: rotate(72.6deg);
+        }
+
+        .wrapper .d4 div {
+            width: 240px;
+            height: 240px;
+        }
+
+        .wrapper .d4 div span {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 33%;
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 100;
+            color: #000;
+            transform: rotate(-187.6deg);
+        }
+
+        .wrapper .d4 div:after {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border: solid transparent;
+            border-width: 120px;
+            border-top-color: #0077b3;
+            position: relative;
+            transform: scaleX(0.22353);
+        }
+
+        .wrapper .d5 {
+            width: 240px;
+            height: 240px;
+            position: absolute;
+            top: -60px;
+            left: -66px;
+            transform: rotate(432deg);
+        }
+
+        .wrapper .d5 div {
+            width: 240px;
+            height: 240px;
+        }
+
+        .wrapper .d5 div span {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 26%;
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 100;
+            color: #000;
+            transform: rotate(-180.6deg);
+        }
+
+        .wrapper .d5 div:after {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border: solid transparent;
+            border-width: 120px;
+            border-top-color: #fcae91;
+            position: relative;
+            /* Update the value of transform to make the pie chart dynamic. It is set for 1% by default */
+            transform: scaleX(0.1);
+        }
+
+        .wrapper .d6 {
+            width: 240px;
+            height: 240px;
+            position: absolute;
+            top: -55px;
+            left: -55px;
+            transform: rotate(91deg);
+        }
+
+        .wrapper .d6 div {
+            width: 240px;
+            height: 240px;
+        }
+
+        .wrapper .d6 div span {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: -3px;
+            top: 27%;
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 100;
+            color: #000;
+            transform: rotate(-183.6deg);
+        }
+
+        .wrapper .d6 div:after {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border: solid transparent;
+            border-width: 120px;
+            border-top-color: #16c7f9;
+            position: relative;
+            transform: scaleX(0.09453);
+        }
+
+        .wrapper .d7 {
+            width: 240px;
+            height: 240px;
+            position: absolute;
+            top: -55px;
+            left: -55px;
+            transform: rotate(118.6deg);
+        }
+
+        .wrapper .d7 div {
+            width: 240px;
+            height: 240px;
+        }
+
+        .wrapper .d7 div span {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 34%;
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 100;
+            color: #000;
+            transform: rotate(-229.6deg);
+        }
+
+        .wrapper .d7 div:after {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border: solid transparent;
+            border-width: 120px;
+            border-top-color: #6baed6;
+            position: relative;
+            transform: scaleX(0.4);
+        }
+
+        .wrapper .d8 {
+            width: 240px;
+            height: 240px;
+            position: absolute;
+            top: -55px;
+            left: -55px;
+            transform: rotate(161.6deg);
+        }
+
+        .wrapper .d8 div {
+            width: 240px;
+            height: 240px;
+        }
+
+        .wrapper .d8 div span {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 34%;
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 100;
+            color: #000;
+            transform: rotate(-265.6deg);
+        }
+
+        .wrapper .d8 div:after {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border: solid transparent;
+            border-width: 120px;
+            border-top-color: #52a0e0;
+            position: relative;
+            transform: scaleX(0.4);
+        }
+
+        .mx-2 {
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table text-nowrap table-bordered text-center">
+        <thead>
+            <tr>
+                <th class="d-flex justify-content-around">
+                    <div class="p-2 mx-2 bg-secondary rounded-pill">July 31 - Aug 5, 2023</div>
+                    <div class="p-2 bg-danger rounded-pill">Total Successful calls <b>2381</b></div>
+                </th>
+                <th>Is tap connection provided?</th>
+                <th>Is water supplied adequate?</th>
+                <th>Are you satisfied with quality of water?</th>
+                <th>Is water supplied regularly?</th>
+                <th>How many in a week water is supplied?</th>
+                <th>Do you pay water charges?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div class=""><span>100%</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div><span>100%</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <div class="wrapper">
+                            <div class="d1">
+                                <div><span>99%</span></div>
+                            </div>
+                            <div class="d5">
+                                <div class="width1"><span>1%</span></div>
+                            </div>
+                        </div>
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <div class="wrapper" style="background-color: #fee5d9;">
+                            <div class="d1">
+                                <div><span>100%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Mention water quality issue?</p>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #fee5d9;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Dirty Water
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #bdd7e7;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Foul Smell
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #6baed6;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Salty Water
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #08519c;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Hard Water
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0077b3;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No issues
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div><span>99%</span></div>
+                        </div>
+                        <div class="d5">
+                            <div><span>1%</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrapper" style="background-color: #fee5d9;">
+                        <div class="d1">
+                            <div><span>45%</span></div>
+                        </div>
+                        <div class="d2">
+                            <div><span>10%</span></div>
+                        </div>
+                        <div class="d3">
+                            <div><span>5%</span></div>
+                        </div>
+                        <div class="d4">
+                            <div><span>3%</span></div>
+                        </div>
+                        <div class="d6">
+                            <div><span>1%</span></div>
+                        </div>
+                        <div class="d7">
+                            <div><span>10%</span></div>
+                        </div>
+                        <div class="d8">
+                            <div><span>20%</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #fee5d9;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            1 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #bdd7e7;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            2 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #6baed6;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            3 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #08519c;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            4 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0077b3;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            5 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-secondary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            6 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #52a0e0;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            7 days
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div><span>99%</span></div>
+                        </div>
+                        <div class="d5">
+                            <div><span>1%</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="d-flex justify-content-around">
+                    <div class="p-2 mx-2 bg-secondary rounded-pill">Cumulative till July 30, 2023</div>
+                    <div class="p-2 bg-danger rounded-pill">Total Successful calls <b>2381</b></div>
+                </td>
+                <td>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div><span>99%</span></div>
+                        </div>
+                        <div class="d5">
+                            <div><span>1%</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div><span>99%</span></div>
+                        </div>
+                        <div class="d5">
+                            <div><span>1%</span></div>
+                        </div>
+                    </div>
+                    <div class="line-3"></div>
+                    <div class="line-4"></div>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div><span>99%</span></div>
+                        </div>
+                        <div class="d5">
+                            <div><span>1%</span></div>
+                        </div>
+                    </div>
+                    <p>Is water supplied is adequate <br> for cooking & drinking?</p>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div><span>99%</span></div>
+                        </div>
+                        <div class="d5">
+                            <div><span>1%</span></div>
+                        </div>
+                    </div>
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="wrapper" style="background-color: #fee5d9;">
+                        <div class="d1">
+                            <div><span>60%</span></div>
+                        </div>
+                        <div class="d2">
+                            <div><span>22%</span></div>
+                        </div>
+                        <div class="d3">
+                            <div><span>8%</span></div>
+                        </div>
+                        <div class="d4">
+                            <div><span>7%</span></div>
+                        </div>
+                        <div class="d6">
+                            <div><span>1%</span></div>
+                        </div>
+                    </div>
+                    <p>Mention water quality issue?</p>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #fee5d9;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Dirty Water
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #bdd7e7;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Foul Smell
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #6baed6;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Salty Water
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #08519c;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Hard Water
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0077b3;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No issues
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div><span>99%</span></div>
+                        </div>
+                        <div class="d5">
+                            <div><span>1%</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrapper" style="background-color: #fee5d9;">
+                        <div class="d1">
+                            <div><span>45%</span></div>
+                        </div>
+                        <div class="d2">
+                            <div><span>10%</span></div>
+                        </div>
+                        <div class="d3">
+                            <div><span>5%</span></div>
+                        </div>
+                        <div class="d4">
+                            <div><span>3%</span></div>
+                        </div>
+                        <div class="d6">
+                            <div><span>1%</span></div>
+                        </div>
+                        <div class="d7">
+                            <div><span>10%</span></div>
+                        </div>
+                        <div class="d8">
+                            <div><span>20%</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #fee5d9;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            1 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #bdd7e7;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            2 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #6baed6;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            3 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #08519c;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            4 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #0077b3;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            5 day
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-secondary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            6 days
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 border border-light rounded-circle" style="background-color: #52a0e0;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            7 days
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrapper">
+                        <div class="d1">
+                            <div><span>99%</span></div>
+                        </div>
+                        <div class="d5">
+                            <div><span>1%</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-info border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            Yes
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            No
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
